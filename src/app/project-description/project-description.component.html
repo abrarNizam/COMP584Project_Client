@@ -1,0 +1,12 @@
+<h2>Project Descriptions</h2>
+<div *ngIf="projects.length > 0; else noProjects">
+  <ul>
+    <li *ngFor="let project of projects">
+      {{ project.projectName }}: {{ project.projectDescription }}
+    </li>
+  </ul>
+</div>
+<ng-template #noProjects>
+  <p>No projects found for this user.</p>
+</ng-template>
+<a routerLink="/">Back to Home</a>

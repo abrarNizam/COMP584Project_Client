@@ -1,0 +1,10 @@
+<h2>User Profile</h2>
+<div *ngIf="userProfile; else noProfile">
+  <p><strong>User ID:</strong> {{ userProfile.userID }}</p>
+  <p><strong>Username:</strong> {{ userProfile.userName }}</p>
+  <p><strong>Email:</strong> {{ userProfile.userEmail }}</p>
+</div>
+<ng-template #noProfile>
+  <p>No profile data available.</p>
+</ng-template>
+<a routerLink="/">Back to Home</a>

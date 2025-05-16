@@ -1,0 +1,120 @@
+body {
+  background: linear-gradient(135deg, #043f35, #acb6e5);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #1a0101a9;
+  font-family: 'Georgia', serif;
+  margin-top: 30px;
+  margin-bottom: 20px; /* Reduced to accommodate nav-links */
+  font-size: 2.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  text-align: center;
+  margin-bottom: 30px; /* Space below nav-links */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links a[routerLink] {
+  position: relative;
+  padding: 12px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  background: linear-gradient(45deg, #ff6f61, #ff9a8b, #ff6f61);
+  background-size: 200%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.5);
+  transition: background-position 0.5s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-links a[routerLink]:hover {
+  background-position: right center;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 111, 97, 0.7);
+}
+
+.nav-links a[routerLink]::after {
+  content: '|';
+  position: absolute;
+  right: -20px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.nav-links a[routerLink]:last-child::after {
+  content: none;
+}
+
+h3 {
+  color: #12010130;
+  font-family: 'Georgia', serif;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+div {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+}
+
+a.username-link {
+  display: block;
+  padding: 15px;
+  background: #fff;
+  border-left: 4px solid #ff6f61;
+  border-radius: 8px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s, color 0.3s;
+}
+
+a.username-link:hover {
+  background: #ff6f61;
+  color: #1f0202;
+  transform: translateX(10px);
+}
+
+p.no-data {
+  text-align: center;
+  margin-top: 20px;
+  color: #ff6f61;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}

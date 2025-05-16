@@ -1,0 +1,14 @@
+<h2>Dashboard</h2>
+<div *ngIf="projects.length > 0; else noProjects">
+  <h3>Your Projects</h3>
+  <ul>
+    <li *ngFor="let project of projects">
+      {{ project.projectName }}: {{ project.projectDescription }}
+      <button (click)="deleteProject(project.projectId)" style="margin-left: 10px;">Delete</button>
+    </li>
+  </ul>
+</div>
+<ng-template #noProjects>
+  <p>No projects available.</p>
+</ng-template>
+<a routerLink="/">Back to Home</a>

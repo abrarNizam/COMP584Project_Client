@@ -1,1 +1,17 @@
-<p>home works!</p>
+<h2>Welcome to the Portfolio App</h2>
+<div class="nav-links">
+  <a routerLink="/profile">View Profile</a> | <a routerLink="/login">Login</a>
+</div>
+<div *ngIf="userProfiles.length > 0; else noData">
+  <h3>Users</h3>
+  <ul>
+    <li *ngFor="let user of userProfiles">
+      <a (click)="goToProjectDescription(user.userID)" class="username-link">
+        {{ user.userName }}
+      </a>
+    </li>
+  </ul>
+</div>
+<ng-template #noData>
+  <p class="no-data">No users available.</p>
+</ng-template>
